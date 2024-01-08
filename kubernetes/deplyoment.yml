@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nike
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nike
+  template:
+    metadata:
+      labels:
+        app: nike
+    spec:
+      containers:
+      - name: nike
+        image: akramzayene/nike:6
+        ports:
+        - containerPort: 80
