@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nike
-        image: akramzayene/nike:6
+        image: akramzayane/nike:6
         ports:
         - containerPort: 80
